@@ -364,7 +364,7 @@ export default Kapsule({
     //state.shadowCanvas.style.left = '0';
     //container.appendChild(state.shadowCanvas);
 
-    const ctx = state.canvas.getContext('2d');
+    const ctx = state.canvas.getContext('2d', { willReadFrequently: true });
     const shadowCtx = state.shadowCanvas.getContext('2d');
 
     const pointerPos = { x: -1e12, y: -1e12 };
